@@ -1,0 +1,30 @@
+.main-header__nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 65px;
+}
+
+.main-header__promo {
+  position: relative;
+  text-align: center;
+
+}
+
+.main-header__promo::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 320px;
+  height: 302px;
+  content: "";
+  background-image: url(../img/background/index-bg-promo-mob.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: -1;
+}
+
+
+

@@ -1,0 +1,17 @@
+.product-card-list {
+  @media @tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 324px);
+    column-gap: 60px;
+    row-gap: 52px;
+    justify-content: center;
+    padding-top: 163px;
+    padding-bottom: 92px;
+  }
+
+  @media @desktop {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 143px;
+  }
+}

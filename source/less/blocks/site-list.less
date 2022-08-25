@@ -1,5 +1,8 @@
 .site-list {
-  list-style-type: none;
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
 }
 
@@ -10,6 +13,13 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media @tablet {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    padding-left: 35px;
+  }
 }
 
 .site-list__link {

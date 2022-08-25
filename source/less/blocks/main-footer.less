@@ -1,5 +1,17 @@
 .main-footer__wrapper {
   padding: 39px 20px 22px;
+  background: #F2F2F2;
+
+  @media @tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 57px 30px 46px;
+  }
+
+  @media @desktop {
+    padding: 63px 110px 55px;
+  }
 }
 
 .main-footer__logo {
@@ -7,8 +19,17 @@
   justify-content: center;
   border-bottom: 1px solid #D9D9D9;
   padding-bottom: 32px;
+
+  @media @tablet {
+    border: none;
+    padding: 0;
+  }
 }
 
 .main-footer__copyright {
   padding-top: 22px;
+
+  @media @tablet {
+    padding: 0;
+  }
 }

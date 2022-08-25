@@ -1,11 +1,28 @@
 .additional-product {
-  padding-bottom: 19px;
+  padding: 13px 0 19px;
   border-bottom: 1px solid #CDCDCD;
+
+  @media @tablet {
+    padding: 26px 38px 28px;
+    border-left: 1px solid #CDCDCD;
+    border-right: 1px solid #CDCDCD;
+    display: grid;
+    row-gap: 23px;
+  }
+
+  @media @desktop {
+    grid-template-columns: 1fr 288px 244px;
+    column-gap: 40px;
+    align-items: center;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0 17px;
+  }
 }
 
 .additional-product__title {
   margin: 0;
-  padding: 13px 0;
+  padding-bottom: 13px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -13,6 +30,13 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #222222;
+
+  @media @tablet {
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
 }
 
 .additional-product__list {
@@ -25,13 +49,38 @@
   font-size: 14px;
   line-height: 14px;
   color: #444444;
+
+  @media @tablet {
+    padding: 0;
+    font-size: 16px;
+    line-height: 20px;
+    justify-content: right;
+  }
+
+  @media @desktop {
+    justify-content: space-between;
+  }
 }
 
 .additional-product__list-definition {
   margin: 0;
+
+  @media @tablet {
+    margin-left: 49px;
+  }
 }
 
 .additional-product__button {
   padding: 10px 0;
   width: 100%;
+
+  @media @tablet {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  @media @desktop {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
 }

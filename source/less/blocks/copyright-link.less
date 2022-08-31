@@ -6,12 +6,23 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  color: #444444;
+  color: @special_dark-grey;
 
+  &:hover .copyright-link__icon {
+    fill: @basic_green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright-link__text {
   @media @tablet {
     padding-right: 22px;
   }
+}
+
+.copyright-link__icon {
+  fill: @special_grey-3;
 }

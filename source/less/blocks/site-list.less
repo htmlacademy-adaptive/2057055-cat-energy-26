@@ -1,5 +1,8 @@
 .site-list {
+  border-top: 1px solid @special_light-grey;
+
   @media @tablet {
+    border: none;
     display: flex;
     flex-wrap: wrap;
   }
@@ -13,16 +16,44 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  text-align: center;
+  border-bottom: 1px solid @special_light-grey;
 
   @media @tablet {
+    border: none;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    padding-left: 35px;
+    padding: 0;
+    margin-left: 35px;
+    padding-bottom: 10px;
+  }
+
+  @media @desktop {
+    font-size: 20px;
+    line-height: 30px;
+
+  }
+
+  &--active {
+    @media @tablet {
+      border-bottom: 2px solid @basic_green;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
 .site-list__link {
   text-decoration: none;
-  color: #000000;
+  color: @black;
+
 }

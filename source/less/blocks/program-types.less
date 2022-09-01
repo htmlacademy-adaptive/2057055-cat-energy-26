@@ -14,15 +14,14 @@
 }
 
 .program-types__type {
-  background: #F2F2F2;
+  background: @basic_grey;
   margin: 20px;
-  padding: 20px;
+  padding: 30px 20px 20px;
   padding-bottom: 18px;
 
   @media @tablet {
     margin: 30px;
-    padding: 50px;
-    padding-top: 77px;
+    padding: 77px 50px 50px;
   }
 
   @media @desktop {
@@ -32,13 +31,95 @@
 
 .program-types__content {
   padding-bottom: 23px;
-  border-bottom: 1px solid #D9D9D9;
+  border-bottom: 1px solid @special_light-grey-4;
   margin-bottom: 15px;
+  position: relative;
 
   @media @tablet {
     padding-bottom: 0;
     margin-bottom: 48px;
     border-bottom: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @basic_green;
+
+    @media @tablet {
+      top: 30px;
+      left: auto;
+      right: 12px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @media @desktop {
+      top: -30px;
+      left: 0;
+      right: auto;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -10px;
+    width: 68px;
+    height: 50px;
+    background-repeat: no-repeat;
+
+    @media @tablet {
+      top: 18px;
+      left: auto;
+      right: -20px;
+      width: 268px;
+      height: 218px;
+    }
+
+    @media @desktop {
+      top: -40px;
+      left: -20px;
+      right: auto;
+      width: 134px;
+      height: 106px;
+    }
+  }
+}
+
+.program-types__content--slim::after {
+  background-image: url("../../img/icons/cat-slim.svg");
+  background-size: 35px 49px;
+  background-position: center;
+
+  @media @tablet {
+    background-size: 140px 194px;
+  }
+
+  @media @desktop {
+    background-size: 70px 97px;
+  }
+}
+
+.program-types__content--pro::after {
+  background-image: url("../../img/icons/cat-pro.svg");
+  background-size: 67px 28px;
+  background-position: center;
+
+  @media @tablet {
+    background-size: 268px 112px;
+  }
+
+  @media @desktop {
+    background-size: 134px 56px;
   }
 }
 
@@ -49,13 +130,21 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  color: #000000;
+  color: @black;
   margin: 0;
+  padding-left: 70px;
+  padding-bottom: 30px;
 
   @media @tablet {
     font-size: 36px;
     line-height: 36px;
+    padding-left: 0;
     padding-bottom: 24px;
+  }
+
+  @media @desktop {
+    padding-left: 160px;
+    padding-bottom: 73px;
   }
 }
 
@@ -63,7 +152,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  color: #444444;
+  color: @special_dark-grey;
   margin: 0;
 
   @media @tablet {
@@ -84,14 +173,37 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  color: #000000;
+  color: @black;
   text-decoration: none;
   display: inline-block;
   padding: 4px 47px 4px 0;
+  position: relative;
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media @tablet {
     font-size: 20px;
     line-height: 30px;
     padding-right: 57px;
   }
+
+  &::after {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    content: "";
+    width: 24px;
+    height: 12px;
+    background-image: url(../../img/icons/icon_arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media @tablet {
+      top: 13px;
+      right: 8px;
+    }
+  }
+
 }

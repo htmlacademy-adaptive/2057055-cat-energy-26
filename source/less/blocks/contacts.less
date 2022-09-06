@@ -96,3 +96,33 @@
     padding-top: 20px;
   }
 }
+
+.contacts__map {
+  min-height: 362px;
+  background-image: url("../../img/map/map-mobile-1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/map/map-mobile-2x.png");
+  }
+
+  @media @tablet {
+    min-height: 400px;
+    background-image: url("../../img/map/map-tablet-1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/map-tablet-2x.png");
+    }
+  }
+
+  @media @desktop {
+    background-image: url("../../img/map/map-desktop-1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/map/map-desktop-2x.png");
+    }
+  }
+
+}

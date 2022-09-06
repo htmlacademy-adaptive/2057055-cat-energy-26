@@ -6,20 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/favicon-32x32.png">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page-body">
   <header class="main-header">
     <div class="main-header__nav">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="191" height="38"
-          alt="Магазин «Кэт энерджи»">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+          <img class="main-header__logo-image" src="img/logo/logo-mobile.svg" alt="Магазин «Кэт энерджи»" width="190"
+            height="38">
+        </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list list">
+          <ul class="site-list list">
             <li class="site-list__item">
               <a class="site-list__link" href="index.html">
                 главная
@@ -103,8 +110,8 @@
             </li>
             <li class="form-selection__item">
               <label class="form-selection__label" for="tel-number">Телефон:*</label>
-              <input class="form-selection__input--tel form-selection__input" type="tel" id="tel-number" name="tel-number"
-                placeholder="8 (960) 900-60-90" required>
+              <input class="form-selection__input--tel form-selection__input" type="tel" id="tel-number"
+                name="tel-number" placeholder="8 (960) 900-60-90" required>
             </li>
           </ul>
         </div>
@@ -112,9 +119,9 @@
 
       <fieldset class="form-selection__fieldset form-selection__comment">
         <legend class="form-selection__title">Комментарий</legend>
-        <div class="form-selection__wrapper">
-          <textarea class="form-selection__input-comment form-selection__input" name="comment" id="comment" cols="30"
-            rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <div class="form-selection__comment-wrapper">
+          <textarea class="form-selection__input-comment form-selection__input" name="comment" id="comment"
+            placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
       </fieldset>
 
@@ -179,7 +186,7 @@
     <div class="main-footer__wrapper">
 
       <a class="main-footer__logo" href="index.html">
-        <img src="img/logo-footer.svg" alt="Магазин «Кэт энерджи»" width="128" height="24">
+        <img src="img/logo/logo-footer.svg" alt="Магазин «Кэт энерджи»" width="128" height="24">
       </a>
 
       <div class="main-footer__social social">

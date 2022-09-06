@@ -50,10 +50,23 @@
   &:active {
     opacity: 0.3;
   }
+
+  &--index {
+    @media @desktop {
+      color: @white;
+    }
+
+  }
+
+  &--index&--active {
+    @media @desktop {
+      border-bottom: 2px solid @white;
+    }
+  }
 }
 
 .site-list__link {
   text-decoration: none;
-  color: @black;
+  color: inherit;
 
 }

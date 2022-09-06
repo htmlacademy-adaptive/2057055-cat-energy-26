@@ -193,12 +193,27 @@
   }
 }
 
-.form-selection__input-comment {
-  padding-top: 10px;
-  margin: 0 20px;
+.form-selection__comment-wrapper {
+  padding: 0 20px;
 
   @media @tablet {
-    margin: 0;
+    padding: 0 70px;
+  }
+
+  @media @desktop {
+    padding: 0 110px;
+  }
+}
+
+.form-selection__input-comment {
+  box-sizing: border-box;
+  display: block;
+  resize: vertical;
+  width: 100%;
+  min-height: 150px;
+
+  @media @tablet {
+    min-height: 174px;
   }
 }
 

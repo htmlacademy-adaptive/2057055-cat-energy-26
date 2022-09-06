@@ -3,7 +3,7 @@
   background: @special_light-grey-2;
 
   @media @tablet {
-    background: none;
+    background: linear-gradient(@white 57%, @special_light-grey-2 57%);
     padding: 0;
   }
 
@@ -11,12 +11,13 @@
     display: flex;
     justify-content: space-between;
     padding: 126px 110px 75px;
+    background: linear-gradient(@white 27%, @special_light-grey-2 27%);
   }
 }
 
 .example__info {
   @media @tablet {
-    padding: 43px 30px 0;
+    padding: 43px 30px 104px;
   }
 
   @media @desktop {
@@ -185,18 +186,3 @@
   }
 }
 
-.example__slider {
-  text-align: center;
-  position: relative;
-
-  @media @tablet {
-    margin-top: 255px;
-    height: 462px;
-    background: @special_light-grey-2;
-
-  }
-
-  @media @desktop {
-    background: none;
-  }
-}

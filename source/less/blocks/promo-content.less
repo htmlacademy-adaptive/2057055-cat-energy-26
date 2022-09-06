@@ -1,23 +1,29 @@
 .promo-content {
+  position: relative;
+  min-height: 480px;
   padding-top: 27px;
-  background-image: url(../img/background/index-bg-promo-mob.png);
-  background-repeat: no-repeat;
-  background-position: top center;
   text-align: center;
   color: @white;
+  background-image: linear-gradient(180deg, rgba(104, 183, 56, 0.85) 302px, @white calc(100% - 302px)), url(../../img/background/index-background-mobile-1x.jpg);
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(180deg, rgba(104, 183, 56, 0.85) 302px, @white calc(100% - 302px)), url(../../img/background/index-background-mobile-2x.jpg)
+  }
 
   @media @tablet {
     background: none;
     text-align: left;
     color: @black;
-    padding-left: 120px;
-    padding-bottom: 526px;
+    padding-left: 30px;
     padding-top: 65px;
   }
 
   @media @desktop {
-    padding-left: 190px;
     padding-top: 110px;
+    padding-left: 190px;
   }
 }
 
@@ -31,9 +37,15 @@
   padding-bottom: 25px;
 
   @media @tablet {
+    padding-left: 87px;
+    padding-bottom: 41px;
     font-size: 60px;
     line-height: 60px;
-    padding-bottom: 41px;
+
+  }
+
+  @media @desktop {
+    padding-left: 0;
   }
 }
 
@@ -48,24 +60,52 @@
   padding-bottom: 29px;
 
   @media @tablet {
+    padding-left: 87px;
+    padding-bottom: 20px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media @desktop {
+    padding-left: 0;
+  }
+}
+
+.promo-content__picture {
+  display: block;
+  margin: 0 auto;
+
+  @media @desktop {
+    position: absolute;
+    top: 32px;
+    right: 330px;
   }
 }
 
 .promo-content__image {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 3px;
   @media @tablet {
-    position: absolute;
-    z-index: -1;
+    width: 709px;
+    height: auto;
+  }
+
+  @media @desktop {
+    width: 552px;
+    height: auto;
   }
 }
 
 .promo-content__link {
   width: 280px;
+
   @media @tablet {
     width: auto;
+    position: absolute;
+    top: 292px;
+    left: 117px;
   }
+
+  @media @desktop {
+    top: 343px;
+    left: 190px;
   }
+}

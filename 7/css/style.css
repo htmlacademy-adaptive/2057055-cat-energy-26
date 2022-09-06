@@ -721,7 +721,7 @@
 }
 @media (min-width: 768px) {
   .example__wrapper {
-    background: none;
+    background: linear-gradient(#FFFFFF 57%, #EAEAEA 57%);
     padding: 0;
   }
 }
@@ -730,11 +730,12 @@
     display: flex;
     justify-content: space-between;
     padding: 126px 110px 75px;
+    background: linear-gradient(#FFFFFF 27%, #EAEAEA 27%);
   }
 }
 @media (min-width: 768px) {
   .example__info {
-    padding: 43px 30px 0;
+    padding: 43px 30px 104px;
   }
 }
 @media (min-width: 1300px) {
@@ -914,6 +915,7 @@
   .range-slider {
     width: 560px;
     height: 512px;
+    padding-bottom: 101px;
   }
 }
 .range-slider__toggle {
@@ -970,7 +972,8 @@
 .range-slider__picture--after {
   object-position: right;
   position: absolute;
-  right: 50%;
+  left: 50%;
+  margin-left: -140px;
 }
 .contacts {
   position: relative;
@@ -1625,6 +1628,7 @@
   }
 }
 .additional-products__promo {
+  position: relative;
   text-align: center;
   background-color: #68B738;
   background-image: url(../../img/background/catalog-background-mobile-1x.jpg);
@@ -1649,12 +1653,41 @@
 }
 @media (min-width: 1300px) {
   .additional-products__promo {
+    margin-bottom: 35px;
     background-image: url(../../img/background/catalog-background-desktop-1x.jpg);
   }
 }
 @media (min-width: 1300px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1300px) and (min-resolution: 2dppx) {
   .additional-products__promo {
     background-image: url(../../img/background/catalog-background-desktop-2x.jpg);
+  }
+}
+.additional-products__promo::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-image: url(../../img/icons/icon_gift.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 59px;
+  left: 50%;
+  margin-left: -40px;
+}
+@media (min-width: 768px) {
+  .additional-products__promo::after {
+    left: 77px;
+    top: 50%;
+    margin-top: -40px;
+    margin-left: 0;
+  }
+}
+@media (min-width: 1300px) {
+  .additional-products__promo::after {
+    top: 56px;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: 0;
   }
 }
 .additional-products__promo-text {
